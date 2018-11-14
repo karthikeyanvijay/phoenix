@@ -16,7 +16,7 @@ Use the following steps for executing the program -
     - Path to hbase-site.xml  
     - Path to core-site.xml  
 - Customize 
-    - Change the `connection.properties` file to point to the correct URL.  
+    - Rename `connection.properties.template` to `connection.properties` and set the actual JDBC url in this file.  
     - On a secured HBase/Phoenix server, get a kerberos ticket.
 
 To run this program use the following syntax.
