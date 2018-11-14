@@ -1,0 +1,7 @@
+# The following URL works without supplying any additional parameters
+# jdbcURL=jdbc:phoenix:thin:url=http://<Phoenix Query Server Host>:8765;serialization=PROTOBUF;authentication=SPENGO;principal=user@EXAMPLE.COM;keytab=/<keytab-path>/user.keytab
+
+# When using the URL without the principal & keytab, 
+# the JVM parameter -Djavax.security.auth.useSubjectCredsOnly=false need to be used during the execution
+# without this parameter, the user will receive a 401 error.
+jdbcURL=jdbc:phoenix:thin:url=http://<Phoenix Query Server Host>:8765;serialization=PROTOBUF;authentication=SPENGO
