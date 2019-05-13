@@ -6,7 +6,7 @@ sc = SparkContext(appName="phoenix-spark-jdbc")
 sqlContext = SQLContext(sc)
 
 # Approach 2 - Using the Phoenix JDBC
-sql='SELECT col1,col2,col3 FROM schema.tablename WHERE col1=98765 AND col2=\'A\' AND col3=\'123456\''
+sql='(SELECT col1,col2,col3 FROM schema.tablename WHERE col1=98765 AND col2=\'A\' AND col3=\'123456\') as A'
 url='jdbc:phoenix:zookeeper.example.com:2181:/hbase-secure'
 df_phoenixTable_jdbc = sqlContext.read\
 .format('jdbc')\
